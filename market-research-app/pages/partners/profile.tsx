@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
@@ -139,7 +139,7 @@ export default function PartnerProfilePage() {
 
   return (
     <Layout>
-      <Head><title>{`Partner Profile — ${siteConfig.name}`}</title></Head>
+      <SEO title="Partner Profile" description="Set up your partner profile to get discovered by co-founders and investors on Valixa." url={`${siteConfig.url}/partners/profile`} noIndex />
       <main className="pt-24 pb-16 min-h-screen bg-gray-50">
         <div className="max-w-2xl mx-auto px-6">
           <div className="mb-8">

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import { useRouter } from "next/router";
 import Layout from "@/components/layout/Layout";
 import { ROUTES, API_ROUTES } from "@/config/routes";
@@ -239,9 +239,12 @@ export default function Analyze() {
 
   return (
     <Layout showFooter={false}>
-      <Head>
-        <title>{`Analyze Your Idea — ${siteConfig.name}`}</title>
-      </Head>
+      <SEO
+        title="Analyze Your Business Idea"
+        description="Describe your business concept, location, and budget. Valixa's AI generates a full market research report with competitor analysis, demographics, and financial projections."
+        url={`${siteConfig.url}/analyze`}
+        noIndex
+      />
 
       {/* ── Loading overlay ─────────────────────────────────────────────── */}
       {loading && (

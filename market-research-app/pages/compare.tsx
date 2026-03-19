@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import AppShell from "@/components/layout/AppShell";
 import { ROUTES } from "@/config/routes";
@@ -333,9 +333,7 @@ export default function ComparePage() {
 
   return (
     <>
-      <Head>
-        <title>{`Location Comparison — ${siteConfig.name}`}</title>
-      </Head>
+      <SEO title="Location Comparison" description="Compare your business idea across multiple cities side by side to find the best market fit." url={`${siteConfig.url}/compare`} />
 
       {/* Loading overlay */}
       {loading && (

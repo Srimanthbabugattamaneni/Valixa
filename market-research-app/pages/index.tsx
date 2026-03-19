@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState, KeyboardEvent } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { ROUTES } from "@/config/routes";
 import { siteConfig } from "@/config/site";
 
@@ -310,13 +310,11 @@ export default function Home() {
 
   return (
     <Layout>
-      <Head>
-        <title>{siteConfig.fullName}</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+      <SEO
+        title="Validate Your Business Idea with AI"
+        description="Enter your business idea and get a full market research report in minutes — competitor analysis, demographics, pricing, and a feasibility score."
+        url={siteConfig.url}
+      />
 
       <div ref={revealRef}>
         {/* ───────────────────── HERO ───────────────────── */}

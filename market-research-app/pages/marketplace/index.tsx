@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import Layout from "@/components/layout/Layout";
@@ -54,7 +54,7 @@ export default function MarketplacePage() {
 
   return (
     <Layout>
-      <Head><title>{`Business Marketplace — ${siteConfig.name}`}</title></Head>
+      <SEO title="Business Marketplace" description="Browse businesses for sale, filter by industry, location, and price. Every listing backed by real market data and a feasibility score." url={`${siteConfig.url}/marketplace`} />
       <main className="pt-24 pb-16 min-h-screen bg-[#09090b]">
         <div className="max-w-7xl mx-auto px-6">
 

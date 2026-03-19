@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import Layout from "@/components/layout/Layout";
@@ -51,7 +51,7 @@ export default function PartnersPage() {
 
   return (
     <Layout>
-      <Head><title>{`Find Partners — ${siteConfig.name}`}</title></Head>
+      <SEO title="Find Co-Founders & Partners" description="Find co-founders, investors, operators, and marketers for your next venture. Filter by role, location, and available capital." url={`${siteConfig.url}/partners`} />
       <main className="pt-24 pb-16 min-h-screen bg-[#09090b]">
         <div className="max-w-7xl mx-auto px-6">
 

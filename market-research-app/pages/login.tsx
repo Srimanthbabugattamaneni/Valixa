@@ -1,8 +1,9 @@
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import { siteConfig } from "@/config/site";
+
 import { ROUTES } from "@/config/routes";
 
 export default function Login() {
@@ -11,9 +12,7 @@ export default function Login() {
 
   return (
     <>
-      <Head>
-        <title>{`Sign In — ${siteConfig.name}`}</title>
-      </Head>
+      <SEO title="Sign In" description="Sign in to Valixa with Google to access your market research reports and dashboard." url={`${siteConfig.url}/login`} noIndex />
 
       <div className="min-h-screen bg-[#09090b] flex flex-col items-center justify-center px-4">
         {/* Ambient glow */}

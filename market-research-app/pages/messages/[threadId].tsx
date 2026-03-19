@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
@@ -110,7 +110,7 @@ export default function ThreadPage() {
 
   return (
     <>
-      <Head><title>{`${otherName} — Messages | ${siteConfig.name}`}</title></Head>
+      <SEO title={`${otherName} — Messages`} url={`${siteConfig.url}/messages`} noIndex />
       <AppShell>
         <div className="flex flex-col h-[calc(100vh-4rem)]">
 

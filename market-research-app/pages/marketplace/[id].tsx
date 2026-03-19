@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
@@ -136,7 +136,7 @@ export default function ListingDetailPage() {
 
   return (
     <Layout>
-      <Head><title>{`${listing.business_name} — ${siteConfig.name}`}</title></Head>
+      <SEO title={listing.business_name} description={`${listing.business_name} is listed for sale on Valixa. Industry: ${listing.industry}. Location: ${listing.location}.`} url={`${siteConfig.url}/marketplace/${listing.id}`} />
       <main className="pt-24 pb-16 min-h-screen bg-gray-50">
         <div className="max-w-5xl mx-auto px-6">
 

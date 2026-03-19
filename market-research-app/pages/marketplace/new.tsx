@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
@@ -93,7 +93,7 @@ export default function NewListingPage() {
 
   return (
     <Layout>
-      <Head><title>{`List Your Business — ${siteConfig.name}`}</title></Head>
+      <SEO title="List Your Business" description="List your business on the Valixa marketplace and reach serious buyers backed by market data." url={`${siteConfig.url}/marketplace/new`} noIndex />
       <main className="pt-24 pb-16 min-h-screen bg-gray-50">
         <div className="max-w-2xl mx-auto px-6">
           <div className="mb-8">

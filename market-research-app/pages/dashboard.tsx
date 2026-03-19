@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
@@ -129,7 +129,7 @@ export default function DashboardPage() {
 
   return (
     <>
-      <Head><title>{`Dashboard — ${siteConfig.name}`}</title></Head>
+      <SEO title="Dashboard" description="View your market research reports and activity." url={`${siteConfig.url}/dashboard`} noIndex />
       <AppShell>
         <div className="p-6 space-y-6">
 

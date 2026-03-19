@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
@@ -225,9 +225,7 @@ export default function MyReportsPage() {
   // ── Main render ──────────────────────────────────────────────────────────────
   return (
     <>
-      <Head>
-        <title>{`My Reports | ${siteConfig.name}`}</title>
-      </Head>
+      <SEO title="My Reports" description="All your market research reports in one place." url={`${siteConfig.url}/reports`} noIndex />
 
       <AppShell>
         <div className="p-6 space-y-5">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import AppShell from "@/components/layout/AppShell";
@@ -1326,9 +1326,12 @@ export default function ReportPage() {
 
   return (
     <>
-      <Head>
-        <title>{`${report.input.businessBrief} Report | ${siteConfig.name}`}</title>
-      </Head>
+      <SEO
+        title={`${report.input.businessBrief} — Market Report`}
+        description={`AI-generated market research report for ${report.input.businessBrief} in ${report.input.location}.`}
+        url={`${siteConfig.url}/reports/${report.id}`}
+        noIndex
+      />
 
       <AppShell>
         <div className="p-6 space-y-5">

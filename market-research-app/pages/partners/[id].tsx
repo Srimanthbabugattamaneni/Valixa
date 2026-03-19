@@ -1,4 +1,4 @@
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useSWR from "swr";
@@ -81,9 +81,7 @@ export default function PartnerDetailPage() {
 
   return (
     <Layout>
-      <Head>
-        <title>{`${partner.display_name} — ${siteConfig.name}`}</title>
-      </Head>
+      <SEO title={partner.display_name} description={`${partner.display_name} is looking for a partner on Valixa. Role: ${partner.role}.`} url={`${siteConfig.url}/partners/${partner.id}`} />
 
       <main className="pt-24 pb-16 min-h-screen bg-gray-50">
         <div className="max-w-3xl mx-auto px-6">

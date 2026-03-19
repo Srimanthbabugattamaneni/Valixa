@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
@@ -51,7 +51,7 @@ export default function MessagesPage() {
 
   return (
     <>
-      <Head><title>{`Messages — ${siteConfig.name}`}</title></Head>
+      <SEO title="Messages" description="Your conversations with partners and marketplace contacts." url={`${siteConfig.url}/messages`} noIndex />
       <AppShell>
         <div className="p-6 space-y-5">
 
