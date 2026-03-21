@@ -188,7 +188,3 @@ AI_MODEL=claude-sonnet-4-6
 | Dark Glassmorphism UI | Consistent dark theme across all pages |
 
 ---
-
-## License
-
-MIT
